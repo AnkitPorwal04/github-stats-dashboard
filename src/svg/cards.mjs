@@ -71,13 +71,14 @@ export function topLangsCard(langs, theme = THEME, max = 6) {
   const total = items.reduce((s, l) => s + l.size, 0) || 1;
   const color = (i) => LANG_PALETTE[i % LANG_PALETTE.length];
 
-  const cx = 95, cy = 120, r = 52, sw = 20;
+  const width = 620;
+  const cx = 310, cy = 190, r = 92, sw = 30;
   const circumference = 2 * Math.PI * r;
-  const gap = 2.5;
+  const gap = 3;
 
   // Donut built from stacked stroked circles: each arc is a dash of length
   // `frac*circumference`, offset by the running total, all rotated -90deg so
-  // the first slice starts at the top.
+  // the first slice starts at the top and slices run clockwise.
   let acc = 0;
   const arcs = items
     .map((l, i) => {
@@ -85,52 +86,52 @@ export function topLangsCard(langs, theme = THEME, max = 6) {
       const draw = Math.max(len - gap, 1);
       const seg = `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${color(i)}" stroke-width="${sw}"
       stroke-dasharray="${draw.toFixed(2)} ${(circumference - draw).toFixed(2)}" stroke-dashoffset="${(-acc).toFixed(2)}"
-      class="seg" style="animation-delay:${250 + i * 130}ms" />`;
+      class="seg" style="animation-delay:${250 + i * 120}ms" />`;
       acc += len;
       return seg;
     })
     .join('');
 
-  const topPct = ((items[0].size / total) * 100).toFixed(0);
-
-  const width = 350;
-  const legendX = 190;
-  const legendTop = 68;
-  const rowGap = 23;
-  const legend = items
+  // Marker labels around the ring: each label sits at its slice's mid-angle,
+  // just outside the donut, with a colored dot linking it to the slice.
+  const labelR = r + sw / 2 + 18;
+  let cum = 0;
+  const markers = items
     .map((l, i) => {
-      const pct = ((l.size / total) * 100).toFixed(1);
-      const y = legendTop + i * rowGap;
+      const frac = l.size / total;
+      const angle = ((-90 + (cum + frac / 2) * 360) * Math.PI) / 180;
+      cum += frac;
+      const lx = cx + labelR * Math.cos(angle);
+      const ly = cy + labelR * Math.sin(angle);
+      const right = Math.cos(angle) >= -0.05;
+      const anchor = right ? 'start' : 'end';
+      const tx = lx + (right ? 11 : -11);
+      const pct = (frac * 100).toFixed(1);
       return `
-    <g class="stagger" style="animation-delay:${450 + i * 110}ms" transform="translate(${legendX}, ${y})">
-      <circle cx="6" cy="-4" r="5.5" fill="${color(i)}"/>
-      <text class="lang" x="20" y="0">${esc(l.name)}</text>
-      <text class="lang pct" x="${width - legendX - 24}" y="0" text-anchor="end">${pct}%</text>
+    <g class="stagger" style="animation-delay:${500 + i * 110}ms">
+      <circle cx="${lx.toFixed(1)}" cy="${ly.toFixed(1)}" r="5.5" fill="${color(i)}"/>
+      <text x="${tx.toFixed(1)}" y="${ly.toFixed(1)}" text-anchor="${anchor}" dominant-baseline="middle" class="lang">${esc(l.name)} <tspan class="pct">${pct}%</tspan></text>
     </g>`;
     })
     .join('');
 
-  const height = Math.max(cy + r + sw / 2 + 12, legendTop + items.length * rowGap + 8);
+  const height = 380;
 
   return `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Most used languages">
   <style>
-    .header { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${theme.title}; }
-    .lang { font: 400 12.5px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: ${theme.text}; }
-    .pct { font-weight: 600; }
-    .center-pct { font: 700 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #e6e6ec; }
-    .center-lang { font: 600 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${theme.text}; }
+    .header { font: 600 19px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${theme.title}; }
+    .lang { font: 400 13px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: ${theme.text}; }
+    .pct { font-weight: 600; fill: #b9c0cc; }
     .seg { opacity: 0; animation: fadeIn 0.7s ease-out forwards; }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    @keyframes slideIn { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; } }
+    @keyframes slideIn { from { opacity: 0; transform: translateX(-6px); } to { opacity: 1; } }
     .stagger { opacity: 0; animation: slideIn 0.45s ease-in-out forwards; }
     .fade { opacity: 0; animation: fadeIn 0.8s ease-in-out forwards; }
   </style>
   <rect x="0.5" y="0.5" rx="6" width="${width - 1}" height="${height - 1}" fill="${theme.bg}" stroke="${theme.border}"/>
-  <text x="25" y="35" class="header fade">Most Used Languages</text>
+  <text x="25" y="38" class="header fade">Most Used Languages</text>
   <g transform="rotate(-90 ${cx} ${cy})">${arcs}</g>
-  <text x="${cx}" y="${cy - 3}" text-anchor="middle" class="center-pct">${topPct}%</text>
-  <text x="${cx}" y="${cy + 15}" text-anchor="middle" class="center-lang">${esc(items[0].name)}</text>
-  ${legend}
+  ${markers}
 </svg>`;
 }
 
