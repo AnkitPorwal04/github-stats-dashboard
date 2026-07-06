@@ -1,38 +1,62 @@
-<svg width="320" height="185" viewBox="0 0 320 185" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Most used languages">
+<svg width="350" height="214" viewBox="0 0 350 214" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Most used languages">
   <style>
     .header { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #6c63ff; }
-    .lang { font: 400 12px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #808080; }
+    .lang { font: 400 12.5px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #808080; }
+    .pct { font-weight: 600; }
+    .center-pct { font: 700 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #e6e6ec; }
+    .center-lang { font: 600 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #808080; }
+    .seg { opacity: 0; animation: fadeIn 0.7s ease-out forwards; }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     @keyframes slideIn { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; } }
     .stagger { opacity: 0; animation: slideIn 0.45s ease-in-out forwards; }
     .fade { opacity: 0; animation: fadeIn 0.8s ease-in-out forwards; }
   </style>
-  <rect x="0.5" y="0.5" rx="6" width="319" height="184" fill="transparent" stroke="transparent"/>
+  <rect x="0.5" y="0.5" rx="6" width="349" height="213" fill="transparent" stroke="transparent"/>
   <text x="25" y="35" class="header fade">Most Used Languages</text>
-  <g class="fade" style="animation-delay:300ms"><rect x="25.00" y="75" width="101.87" height="8" fill="#663399" rx="4"/><rect x="126.87" y="75" width="49.76" height="8" fill="#3178c6" rx="4"/><rect x="176.63" y="75" width="42.37" height="8" fill="#f1e05a" rx="4"/><rect x="219.00" y="75" width="41.50" height="8" fill="#3572A5" rx="4"/><rect x="260.50" y="75" width="22.15" height="8" fill="#e34c26" rx="4"/><rect x="282.64" y="75" width="12.36" height="8" fill="#f34b7d" rx="4"/></g>
+  <g transform="rotate(-90 95 120)"><circle cx="95" cy="120" r="52" fill="none" stroke="#8b7bff" stroke-width="20"
+      stroke-dasharray="120.78 205.95" stroke-dashoffset="0.00"
+      class="seg" style="animation-delay:250ms" /><circle cx="95" cy="120" r="52" fill="none" stroke="#22d3ee" stroke-width="20"
+      stroke-dasharray="57.71 269.02" stroke-dashoffset="-123.28"
+      class="seg" style="animation-delay:380ms" /><circle cx="95" cy="120" r="52" fill="none" stroke="#f6c945" stroke-width="20"
+      stroke-dasharray="48.77 277.96" stroke-dashoffset="-183.49"
+      class="seg" style="animation-delay:510ms" /><circle cx="95" cy="120" r="52" fill="none" stroke="#4f9dff" stroke-width="20"
+      stroke-dasharray="47.72 279.01" stroke-dashoffset="-234.75"
+      class="seg" style="animation-delay:640ms" /><circle cx="95" cy="120" r="52" fill="none" stroke="#fb7185" stroke-width="20"
+      stroke-dasharray="24.30 302.43" stroke-dashoffset="-284.97"
+      class="seg" style="animation-delay:770ms" /><circle cx="95" cy="120" r="52" fill="none" stroke="#34d399" stroke-width="20"
+      stroke-dasharray="12.45 314.27" stroke-dashoffset="-311.77"
+      class="seg" style="animation-delay:900ms" /></g>
+  <text x="95" y="117" text-anchor="middle" class="center-pct">38%</text>
+  <text x="95" y="135" text-anchor="middle" class="center-lang">CSS</text>
   
-    <g class="stagger" style="animation-delay:450ms" transform="translate(25, 105)">
-      <circle cx="5" cy="-4" r="5" fill="#663399"/>
-      <text class="lang" x="16" y="0">CSS 37.7%</text>
+    <g class="stagger" style="animation-delay:450ms" transform="translate(190, 68)">
+      <circle cx="6" cy="-4" r="5.5" fill="#8b7bff"/>
+      <text class="lang" x="20" y="0">CSS</text>
+      <text class="lang pct" x="136" y="0" text-anchor="end">37.7%</text>
     </g>
-    <g class="stagger" style="animation-delay:570ms" transform="translate(175, 105)">
-      <circle cx="5" cy="-4" r="5" fill="#3178c6"/>
-      <text class="lang" x="16" y="0">TypeScript 18.4%</text>
+    <g class="stagger" style="animation-delay:560ms" transform="translate(190, 91)">
+      <circle cx="6" cy="-4" r="5.5" fill="#22d3ee"/>
+      <text class="lang" x="20" y="0">TypeScript</text>
+      <text class="lang pct" x="136" y="0" text-anchor="end">18.4%</text>
     </g>
-    <g class="stagger" style="animation-delay:690ms" transform="translate(25, 130)">
-      <circle cx="5" cy="-4" r="5" fill="#f1e05a"/>
-      <text class="lang" x="16" y="0">JavaScript 15.7%</text>
+    <g class="stagger" style="animation-delay:670ms" transform="translate(190, 114)">
+      <circle cx="6" cy="-4" r="5.5" fill="#f6c945"/>
+      <text class="lang" x="20" y="0">JavaScript</text>
+      <text class="lang pct" x="136" y="0" text-anchor="end">15.7%</text>
     </g>
-    <g class="stagger" style="animation-delay:810ms" transform="translate(175, 130)">
-      <circle cx="5" cy="-4" r="5" fill="#3572A5"/>
-      <text class="lang" x="16" y="0">Python 15.4%</text>
+    <g class="stagger" style="animation-delay:780ms" transform="translate(190, 137)">
+      <circle cx="6" cy="-4" r="5.5" fill="#4f9dff"/>
+      <text class="lang" x="20" y="0">Python</text>
+      <text class="lang pct" x="136" y="0" text-anchor="end">15.4%</text>
     </g>
-    <g class="stagger" style="animation-delay:930ms" transform="translate(25, 155)">
-      <circle cx="5" cy="-4" r="5" fill="#e34c26"/>
-      <text class="lang" x="16" y="0">HTML 8.2%</text>
+    <g class="stagger" style="animation-delay:890ms" transform="translate(190, 160)">
+      <circle cx="6" cy="-4" r="5.5" fill="#fb7185"/>
+      <text class="lang" x="20" y="0">HTML</text>
+      <text class="lang pct" x="136" y="0" text-anchor="end">8.2%</text>
     </g>
-    <g class="stagger" style="animation-delay:1050ms" transform="translate(175, 155)">
-      <circle cx="5" cy="-4" r="5" fill="#f34b7d"/>
-      <text class="lang" x="16" y="0">C++ 4.6%</text>
+    <g class="stagger" style="animation-delay:1000ms" transform="translate(190, 183)">
+      <circle cx="6" cy="-4" r="5.5" fill="#34d399"/>
+      <text class="lang" x="20" y="0">C++</text>
+      <text class="lang pct" x="136" y="0" text-anchor="end">4.6%</text>
     </g>
 </svg>

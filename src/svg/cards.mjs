@@ -64,55 +64,62 @@ export function statsCard(stats, theme = THEME) {
 </svg>`;
 }
 
-// ---------------------------------------------------------------------------
-// Top languages card (compact horizontal bars)
-// ---------------------------------------------------------------------------
+export const LANG_PALETTE = ['#8b7bff', '#22d3ee', '#f6c945', '#4f9dff', '#fb7185', '#34d399', '#f59e0b', '#a78bfa'];
+
 export function topLangsCard(langs, theme = THEME, max = 6) {
   const items = langs.slice(0, max);
   const total = items.reduce((s, l) => s + l.size, 0) || 1;
+  const color = (i) => LANG_PALETTE[i % LANG_PALETTE.length];
 
-  const barY = 75;
-  const barH = 8;
-  const barW = 270;
-  let bars = '';
-  let x = 25;
-  const segments = items
-    .map((l) => {
-      const w = Math.max(2, (l.size / total) * barW);
-      const seg = `<rect x="${x.toFixed(2)}" y="${barY}" width="${w.toFixed(2)}" height="${barH}" fill="${l.color || '#858585'}" rx="4"/>`;
-      x += w;
+  const cx = 95, cy = 120, r = 52, sw = 20;
+  const circumference = 2 * Math.PI * r;
+  const gap = 2.5;
+
+  // Donut built from stacked stroked circles: each arc is a dash of length
+  // `frac*circumference`, offset by the running total, all rotated -90deg so
+  // the first slice starts at the top.
+  let acc = 0;
+  const arcs = items
+    .map((l, i) => {
+      const len = (l.size / total) * circumference;
+      const draw = Math.max(len - gap, 1);
+      const seg = `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${color(i)}" stroke-width="${sw}"
+      stroke-dasharray="${draw.toFixed(2)} ${(circumference - draw).toFixed(2)}" stroke-dashoffset="${(-acc).toFixed(2)}"
+      class="seg" style="animation-delay:${250 + i * 130}ms" />`;
+      acc += len;
       return seg;
     })
     .join('');
-  bars = `<g class="fade" style="animation-delay:300ms">${segments}</g>`;
 
-  const legendStartY = 105;
-  const colGap = 150;
-  const rowGap = 25;
+  const topPct = ((items[0].size / total) * 100).toFixed(0);
+
+  const width = 350;
+  const legendX = 190;
+  const legendTop = 68;
+  const rowGap = 23;
   const legend = items
     .map((l, i) => {
-      const col = i % 2;
-      const row = Math.floor(i / 2);
-      const lx = 25 + col * colGap;
-      const ly = legendStartY + row * rowGap;
       const pct = ((l.size / total) * 100).toFixed(1);
-      const delay = 450 + i * 120;
+      const y = legendTop + i * rowGap;
       return `
-    <g class="stagger" style="animation-delay:${delay}ms" transform="translate(${lx}, ${ly})">
-      <circle cx="5" cy="-4" r="5" fill="${l.color || '#858585'}"/>
-      <text class="lang" x="16" y="0">${esc(l.name)} ${pct}%</text>
+    <g class="stagger" style="animation-delay:${450 + i * 110}ms" transform="translate(${legendX}, ${y})">
+      <circle cx="6" cy="-4" r="5.5" fill="${color(i)}"/>
+      <text class="lang" x="20" y="0">${esc(l.name)}</text>
+      <text class="lang pct" x="${width - legendX - 24}" y="0" text-anchor="end">${pct}%</text>
     </g>`;
     })
     .join('');
 
-  const legendRows = Math.ceil(items.length / 2);
-  const height = legendStartY + legendRows * rowGap + 5;
-  const width = 320;
+  const height = Math.max(cy + r + sw / 2 + 12, legendTop + items.length * rowGap + 8);
 
   return `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Most used languages">
   <style>
     .header { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${theme.title}; }
-    .lang { font: 400 12px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: ${theme.text}; }
+    .lang { font: 400 12.5px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: ${theme.text}; }
+    .pct { font-weight: 600; }
+    .center-pct { font: 700 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #e6e6ec; }
+    .center-lang { font: 600 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${theme.text}; }
+    .seg { opacity: 0; animation: fadeIn 0.7s ease-out forwards; }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     @keyframes slideIn { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; } }
     .stagger { opacity: 0; animation: slideIn 0.45s ease-in-out forwards; }
@@ -120,7 +127,9 @@ export function topLangsCard(langs, theme = THEME, max = 6) {
   </style>
   <rect x="0.5" y="0.5" rx="6" width="${width - 1}" height="${height - 1}" fill="${theme.bg}" stroke="${theme.border}"/>
   <text x="25" y="35" class="header fade">Most Used Languages</text>
-  ${bars}
+  <g transform="rotate(-90 ${cx} ${cy})">${arcs}</g>
+  <text x="${cx}" y="${cy - 3}" text-anchor="middle" class="center-pct">${topPct}%</text>
+  <text x="${cx}" y="${cy + 15}" text-anchor="middle" class="center-lang">${esc(items[0].name)}</text>
   ${legend}
 </svg>`;
 }
