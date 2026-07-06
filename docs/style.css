@@ -137,8 +137,8 @@ body {
 .chart-card { display: flex; flex-direction: column; }
 .chart-wrap { position: relative; height: 260px; flex: 1; }
 .chart-wrap canvas { position: absolute; inset: 0; width: 100% !important; height: 100% !important; }
-.lang-layout { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 18px; align-items: center; flex: 1; }
-.lang-chart-wrap { height: 220px; }
+.lang-layout { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 20px; align-items: center; flex: 1; }
+.lang-chart-wrap { height: 250px; }
 .lang-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
 .lang-list li { font-size: 0.82rem; }
 .lang-row { display: flex; align-items: center; gap: 8px; margin-bottom: 3px; color: var(--text-dim); }

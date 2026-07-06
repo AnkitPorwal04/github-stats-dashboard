@@ -160,36 +160,76 @@ function renderTimeline(timeline) {
   });
 }
 
+const LANG_PALETTE = ['#8b7bff', '#22d3ee', '#f6c945', '#4f9dff', '#fb7185', '#34d399', '#f59e0b', '#a78bfa'];
+
 function renderLanguages(langs) {
   const top = (langs || []).slice(0, 6);
   const total = top.reduce((a, l) => a + l.size, 0) || 1;
+  const colors = top.map((_, i) => LANG_PALETTE[i % LANG_PALETTE.length]);
+
+  const centerText = {
+    id: 'centerText',
+    afterDatasetsDraw(chart) {
+      const meta = chart.getDatasetMeta(0);
+      if (!meta.data.length) return;
+      const { x, y } = meta.data[0];
+      const pct = ((top[0].size / total) * 100).toFixed(0);
+      const ctx = chart.ctx;
+      ctx.save();
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillStyle = '#eef0f6';
+      ctx.font = '700 26px "JetBrains Mono", monospace';
+      ctx.fillText(pct + '%', x, y - 9);
+      ctx.fillStyle = '#97a0b0';
+      ctx.font = '600 12px Inter, sans-serif';
+      ctx.fillText(top[0].name, x, y + 15);
+      ctx.restore();
+    },
+  };
+
   new Chart($('langChart'), {
     type: 'doughnut',
     data: {
       labels: top.map((l) => l.name),
       datasets: [{
         data: top.map((l) => l.size),
-        backgroundColor: top.map((l) => l.color || '#858585'),
-        borderColor: 'rgba(10,12,18,0.9)',
-        borderWidth: 3,
-        hoverOffset: 6,
+        backgroundColor: colors,
+        borderColor: 'rgba(10,12,18,0.85)',
+        borderWidth: 2,
+        borderRadius: 6,
+        spacing: 3,
+        hoverOffset: 10,
       }],
     },
-    options: { responsive: true, maintainAspectRatio: false, cutout: '66%', plugins: { legend: { display: false } } },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      cutout: '72%',
+      layout: { padding: 6 },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: { label: (c) => ` ${c.label}: ${((c.parsed / total) * 100).toFixed(1)}%` },
+        },
+      },
+    },
+    plugins: [centerText],
   });
 
   const list = $('lang-list');
   list.innerHTML = '';
   top.forEach((l, i) => {
     const pct = ((l.size / total) * 100).toFixed(1);
+    const c = colors[i];
     const li = document.createElement('li');
     li.innerHTML = `
       <div class="lang-row">
-        <span class="lang-dot" style="background:${l.color || '#858585'}"></span>
+        <span class="lang-dot" style="background:${c}"></span>
         <span class="lang-name">${escapeHtml(l.name)}</span>
         <span class="lang-pct">${pct}%</span>
       </div>
-      <div class="lang-bar"><span style="background:${l.color || '#858585'}"></span></div>`;
+      <div class="lang-bar"><span style="background:${c}"></span></div>`;
     list.appendChild(li);
     requestAnimationFrame(() =>
       setTimeout(() => { li.querySelector('.lang-bar > span').style.width = pct + '%'; }, 120 + i * 90));
