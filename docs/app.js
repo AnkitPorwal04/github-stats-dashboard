@@ -150,10 +150,11 @@ function renderTimeline(timeline) {
     },
     options: {
       responsive: true,
+      maintainAspectRatio: false,
       plugins: { legend: { display: false }, tooltip: { intersect: false, mode: 'index' } },
       scales: {
-        x: { ticks: { color: DIM, font: { size: 10 } }, grid: { display: false } },
-        y: { ticks: { color: DIM, font: { size: 10 } }, grid: { color: 'rgba(255,255,255,0.05)' }, beginAtZero: true },
+        x: { ticks: { color: DIM, font: { size: 10 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 8 }, grid: { display: false } },
+        y: { ticks: { color: DIM, font: { size: 10 }, maxTicksLimit: 5 }, grid: { color: 'rgba(255,255,255,0.05)' }, beginAtZero: true },
       },
     },
   });
@@ -174,7 +175,7 @@ function renderLanguages(langs) {
         hoverOffset: 6,
       }],
     },
-    options: { responsive: true, cutout: '68%', plugins: { legend: { display: false } } },
+    options: { responsive: true, maintainAspectRatio: false, cutout: '66%', plugins: { legend: { display: false } } },
   });
 
   const list = $('lang-list');

@@ -133,9 +133,12 @@ body {
 .heatmap-legend { display: flex; align-items: center; gap: 5px; margin-top: 12px; justify-content: flex-end; }
 .heatmap-legend .hm-cell { width: 11px; height: 11px; }
 
-.charts { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
-.chart-card canvas { width: 100% !important; }
-.lang-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: center; }
+.charts { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: stretch; }
+.chart-card { display: flex; flex-direction: column; }
+.chart-wrap { position: relative; height: 260px; flex: 1; }
+.chart-wrap canvas { position: absolute; inset: 0; width: 100% !important; height: 100% !important; }
+.lang-layout { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 18px; align-items: center; flex: 1; }
+.lang-chart-wrap { height: 220px; }
 .lang-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
 .lang-list li { font-size: 0.82rem; }
 .lang-row { display: flex; align-items: center; gap: 8px; margin-bottom: 3px; color: var(--text-dim); }
