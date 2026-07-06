@@ -74,9 +74,9 @@ Card colors live in `src/svg/cards.mjs` (`THEME`): title/icon `#6c63ff`, text `#
 ```markdown
 <div align="center">
   <img height="200" alt="Ankit Porwal's GitHub stats"
-       src="https://raw.githubusercontent.com/AnkitPorwal04/github-stats-dashboard/main/docs/assets/stats.svg" />
+       src="https://ankitporwal04.github.io/github-stats-dashboard/assets/stats.svg" />
   <img height="200" alt="Top languages"
-       src="https://raw.githubusercontent.com/AnkitPorwal04/github-stats-dashboard/main/docs/assets/top-langs.svg" />
+       src="https://ankitporwal04.github.io/github-stats-dashboard/assets/top-langs.svg" />
 </div>
 
 <p align="center">
@@ -84,4 +84,4 @@ Card colors live in `src/svg/cards.mjs` (`THEME`): title/icon `#6c63ff`, text `#
 </p>
 ```
 
-`raw.githubusercontent.com` always serves the latest committed SVG, so the cards refresh whenever the workflow commits.
+Use the **GitHub Pages** URL (`*.github.io/.../assets/*.svg`), not `raw.githubusercontent.com`. Raw serves SVG as `text/plain`, which browsers refuse to render in an `<img>`; Pages serves the correct `image/svg+xml`. The Pages copy refreshes each time the workflow commits.

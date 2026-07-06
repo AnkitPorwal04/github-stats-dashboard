@@ -219,8 +219,8 @@ function setupCopy(s) {
   const btn = $('copy-embed');
   if (!btn) return;
   const embed = `<div align="center">
-  <img height="200" alt="${s.name || s.login}'s GitHub stats" src="https://raw.githubusercontent.com/AnkitPorwal04/github-stats-dashboard/main/docs/assets/stats.svg" />
-  <img height="200" alt="Most used languages" src="https://raw.githubusercontent.com/AnkitPorwal04/github-stats-dashboard/main/docs/assets/top-langs.svg" />
+  <img height="200" alt="${s.name || s.login}'s GitHub stats" src="https://ankitporwal04.github.io/github-stats-dashboard/assets/stats.svg" />
+  <img height="200" alt="Most used languages" src="https://ankitporwal04.github.io/github-stats-dashboard/assets/top-langs.svg" />
 </div>`;
   btn.addEventListener('click', async () => {
     try { await navigator.clipboard.writeText(embed); toast('Embed markdown copied ✓'); }
