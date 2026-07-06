@@ -42,6 +42,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "chore: update GitHub stats [skip ci]"
+            git commit -m "chore: update GitHub stats"
             git push
           fi
