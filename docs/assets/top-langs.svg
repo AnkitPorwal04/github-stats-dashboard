@@ -1,0 +1,38 @@
+<svg width="320" height="185" viewBox="0 0 320 185" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Most used languages">
+  <style>
+    .header { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #6c63ff; }
+    .lang { font: 400 12px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #808080; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideIn { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; } }
+    .stagger { opacity: 0; animation: slideIn 0.45s ease-in-out forwards; }
+    .fade { opacity: 0; animation: fadeIn 0.8s ease-in-out forwards; }
+  </style>
+  <rect x="0.5" y="0.5" rx="6" width="319" height="184" fill="transparent" stroke="transparent"/>
+  <text x="25" y="35" class="header fade">Most Used Languages</text>
+  <g class="fade" style="animation-delay:300ms"><rect x="25.00" y="75" width="102.67" height="8" fill="#663399" rx="4"/><rect x="127.67" y="75" width="50.14" height="8" fill="#3178c6" rx="4"/><rect x="177.81" y="75" width="41.82" height="8" fill="#3572A5" rx="4"/><rect x="219.63" y="75" width="40.59" height="8" fill="#f1e05a" rx="4"/><rect x="260.23" y="75" width="22.32" height="8" fill="#e34c26" rx="4"/><rect x="282.55" y="75" width="12.45" height="8" fill="#f34b7d" rx="4"/></g>
+  
+    <g class="stagger" style="animation-delay:450ms" transform="translate(25, 105)">
+      <circle cx="5" cy="-4" r="5" fill="#663399"/>
+      <text class="lang" x="16" y="0">CSS 38.0%</text>
+    </g>
+    <g class="stagger" style="animation-delay:570ms" transform="translate(175, 105)">
+      <circle cx="5" cy="-4" r="5" fill="#3178c6"/>
+      <text class="lang" x="16" y="0">TypeScript 18.6%</text>
+    </g>
+    <g class="stagger" style="animation-delay:690ms" transform="translate(25, 130)">
+      <circle cx="5" cy="-4" r="5" fill="#3572A5"/>
+      <text class="lang" x="16" y="0">Python 15.5%</text>
+    </g>
+    <g class="stagger" style="animation-delay:810ms" transform="translate(175, 130)">
+      <circle cx="5" cy="-4" r="5" fill="#f1e05a"/>
+      <text class="lang" x="16" y="0">JavaScript 15.0%</text>
+    </g>
+    <g class="stagger" style="animation-delay:930ms" transform="translate(25, 155)">
+      <circle cx="5" cy="-4" r="5" fill="#e34c26"/>
+      <text class="lang" x="16" y="0">HTML 8.3%</text>
+    </g>
+    <g class="stagger" style="animation-delay:1050ms" transform="translate(175, 155)">
+      <circle cx="5" cy="-4" r="5" fill="#f34b7d"/>
+      <text class="lang" x="16" y="0">C++ 4.6%</text>
+    </g>
+</svg>
