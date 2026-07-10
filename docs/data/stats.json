@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-10T02:24:29.656Z",
+  "generatedAt": "2026-07-10T14:07:53.917Z",
   "login": "AnkitPorwal04",
   "name": "Ankit Porwal",
   "avatarUrl": "https://avatars.githubusercontent.com/u/96345105?u=95f86ee926ceff67f8a19437c4b0386c63a048bf&v=4",
   "bio": "Software Engineer @ Ethara.AI, Gurugram, India",
   "createdAt": "2021-12-18T15:08:59Z",
-  "followers": 15,
+  "followers": 16,
   "following": 12,
-  "totalStars": 93,
+  "totalStars": 129,
   "totalForks": 6,
   "totalRepos": 36,
   "totalPRs": 6,
@@ -1610,7 +1610,7 @@
       "name": "LeetCode",
       "description": "This repository contains solved  LeetCode problems!",
       "url": "https://github.com/AnkitPorwal04/LeetCode",
-      "stars": 15,
+      "stars": 16,
       "forks": 3,
       "language": "Python",
       "languageColor": "#3572A5"
@@ -1619,7 +1619,7 @@
       "name": "BlogsByAnkit",
       "description": null,
       "url": "https://github.com/AnkitPorwal04/BlogsByAnkit",
-      "stars": 4,
+      "stars": 5,
       "forks": 0,
       "language": "JavaScript",
       "languageColor": "#f1e05a"
@@ -1628,7 +1628,7 @@
       "name": "ImaginAI",
       "description": null,
       "url": "https://github.com/AnkitPorwal04/ImaginAI",
-      "stars": 4,
+      "stars": 5,
       "forks": 0,
       "language": "JavaScript",
       "languageColor": "#f1e05a"
@@ -1637,7 +1637,7 @@
       "name": "drowsy_driver_web",
       "description": null,
       "url": "https://github.com/AnkitPorwal04/drowsy_driver_web",
-      "stars": 4,
+      "stars": 5,
       "forks": 2,
       "language": "Python",
       "languageColor": "#3572A5"
@@ -1646,7 +1646,7 @@
       "name": "HR_management_system",
       "description": null,
       "url": "https://github.com/AnkitPorwal04/HR_management_system",
-      "stars": 4,
+      "stars": 5,
       "forks": 0,
       "language": "CSS",
       "languageColor": "#663399"
@@ -1655,7 +1655,7 @@
       "name": "Interview_prep",
       "description": null,
       "url": "https://github.com/AnkitPorwal04/Interview_prep",
-      "stars": 3,
+      "stars": 4,
       "forks": 1,
       "language": "TypeScript",
       "languageColor": "#3178c6"
