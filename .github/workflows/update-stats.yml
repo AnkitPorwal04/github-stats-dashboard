@@ -13,6 +13,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: update-stats
@@ -35,13 +36,24 @@ jobs:
         run: node scripts/fetch-stats.mjs
 
       - name: Commit generated files
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/data/stats.json docs/assets/stats.svg docs/assets/top-langs.svg
           if git diff --staged --quiet; then
             echo "No changes to commit."
+            echo "pushed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "chore: update GitHub stats"
             git push
+            echo "pushed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      # Pushes made with GITHUB_TOKEN don't trigger `on: push` workflows,
+      # so explicitly dispatch the Pages deploy when stats changed.
+      - name: Trigger Pages deploy
+        if: steps.commit.outputs.pushed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run pages.yml --ref main --repo "$GITHUB_REPOSITORY"
