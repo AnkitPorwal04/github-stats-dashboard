@@ -168,8 +168,8 @@ body {
 }
 .copy-btn:hover { background: rgba(108,99,255,0.28); }
 .copy-btn:active { transform: scale(0.96); }
-.embeds { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 14px; }
-.embed { background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 12px; padding: 12px; max-width: 100%; }
+.embeds { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 14px; align-items: flex-start; }
+.embed { background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 12px; padding: 12px; max-width: calc(50% - 9px); height: auto; }
 
 .footer { text-align: center; padding-top: 10px; display: flex; gap: 8px; justify-content: center; }
 .footer a:hover { color: var(--accent-2); }
@@ -192,6 +192,7 @@ body {
 .reveal.in { opacity: 1; transform: translateY(0); }
 
 @media (max-width: 760px) {
+  .embed { max-width: 100%; }
   .charts { grid-template-columns: 1fr; }
   .lang-layout { grid-template-columns: 1fr; }
   .hero { flex-direction: column; text-align: center; }
