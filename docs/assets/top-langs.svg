@@ -12,41 +12,41 @@
   <rect x="0.5" y="0.5" rx="6" width="619" height="379" fill="transparent" stroke="transparent"/>
   <text x="25" y="38" class="header fade">Most Used Languages</text>
   <g transform="rotate(-90 310 190)"><circle cx="310" cy="190" r="92" fill="none" stroke="#8b7bff" stroke-width="30"
-      stroke-dasharray="191.76 386.30" stroke-dashoffset="0.00"
+      stroke-dasharray="190.31 387.74" stroke-dashoffset="0.00"
       class="seg" style="animation-delay:250ms" /><circle cx="310" cy="190" r="92" fill="none" stroke="#22d3ee" stroke-width="30"
-      stroke-dasharray="152.01 426.04" stroke-dashoffset="-194.76"
+      stroke-dasharray="156.44 421.62" stroke-dashoffset="-193.31"
       class="seg" style="animation-delay:370ms" /><circle cx="310" cy="190" r="92" fill="none" stroke="#f6c945" stroke-width="30"
-      stroke-dasharray="81.85 496.21" stroke-dashoffset="-349.77"
+      stroke-dasharray="80.74 497.32" stroke-dashoffset="-352.75"
       class="seg" style="animation-delay:490ms" /><circle cx="310" cy="190" r="92" fill="none" stroke="#4f9dff" stroke-width="30"
-      stroke-dasharray="74.76 503.29" stroke-dashoffset="-434.61"
+      stroke-dasharray="73.74 504.31" stroke-dashoffset="-436.49"
       class="seg" style="animation-delay:610ms" /><circle cx="310" cy="190" r="92" fill="none" stroke="#fb7185" stroke-width="30"
-      stroke-dasharray="39.52 538.53" stroke-dashoffset="-512.37"
+      stroke-dasharray="38.97 539.08" stroke-dashoffset="-513.23"
       class="seg" style="animation-delay:730ms" /><circle cx="310" cy="190" r="92" fill="none" stroke="#34d399" stroke-width="30"
-      stroke-dasharray="20.15 557.90" stroke-dashoffset="-554.90"
+      stroke-dasharray="19.85 558.20" stroke-dashoffset="-555.20"
       class="seg" style="animation-delay:850ms" /></g>
   
     <g class="stagger" style="animation-delay:500ms">
-      <circle cx="419.0" cy="128.7" r="5.5" fill="#8b7bff"/>
-      <text x="430.0" y="128.7" text-anchor="start" dominant-baseline="middle" class="lang">CSS <tspan class="pct">33.7%</tspan></text>
+      <circle cx="418.5" cy="127.9" r="5.5" fill="#8b7bff"/>
+      <text x="429.5" y="127.9" text-anchor="start" dominant-baseline="middle" class="lang">CSS <tspan class="pct">33.4%</tspan></text>
     </g>
     <g class="stagger" style="animation-delay:610ms">
-      <circle cx="332.7" cy="312.9" r="5.5" fill="#22d3ee"/>
-      <text x="343.7" y="312.9" text-anchor="start" dominant-baseline="middle" class="lang">TypeScript <tspan class="pct">26.8%</tspan></text>
+      <circle cx="331.6" cy="313.1" r="5.5" fill="#22d3ee"/>
+      <text x="342.6" y="313.1" text-anchor="start" dominant-baseline="middle" class="lang">TypeScript <tspan class="pct">27.6%</tspan></text>
     </g>
     <g class="stagger" style="animation-delay:720ms">
-      <circle cx="197.4" cy="244.3" r="5.5" fill="#f6c945"/>
-      <text x="186.4" y="244.3" text-anchor="end" dominant-baseline="middle" class="lang">JavaScript <tspan class="pct">14.7%</tspan></text>
+      <circle cx="196.0" cy="241.3" r="5.5" fill="#f6c945"/>
+      <text x="185.0" y="241.3" text-anchor="end" dominant-baseline="middle" class="lang">JavaScript <tspan class="pct">14.5%</tspan></text>
     </g>
     <g class="stagger" style="animation-delay:830ms">
-      <circle cx="196.6" cy="137.4" r="5.5" fill="#4f9dff"/>
-      <text x="185.6" y="137.4" text-anchor="end" dominant-baseline="middle" class="lang">Python <tspan class="pct">13.5%</tspan></text>
+      <circle cx="197.4" cy="135.7" r="5.5" fill="#4f9dff"/>
+      <text x="186.4" y="135.7" text-anchor="end" dominant-baseline="middle" class="lang">Python <tspan class="pct">13.3%</tspan></text>
     </g>
     <g class="stagger" style="animation-delay:940ms">
-      <circle cx="252.0" cy="79.3" r="5.5" fill="#fb7185"/>
-      <text x="241.0" y="79.3" text-anchor="end" dominant-baseline="middle" class="lang">HTML <tspan class="pct">7.4%</tspan></text>
+      <circle cx="252.7" cy="78.9" r="5.5" fill="#fb7185"/>
+      <text x="241.7" y="78.9" text-anchor="end" dominant-baseline="middle" class="lang">HTML <tspan class="pct">7.3%</tspan></text>
     </g>
     <g class="stagger" style="animation-delay:1050ms">
-      <circle cx="294.3" cy="66.0" r="5.5" fill="#34d399"/>
-      <text x="283.3" y="66.0" text-anchor="end" dominant-baseline="middle" class="lang">C++ <tspan class="pct">4.0%</tspan></text>
+      <circle cx="294.5" cy="66.0" r="5.5" fill="#34d399"/>
+      <text x="283.5" y="66.0" text-anchor="end" dominant-baseline="middle" class="lang">C++ <tspan class="pct">4.0%</tspan></text>
     </g>
 </svg>

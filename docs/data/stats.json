@@ -1,30 +1,30 @@
 {
-  "generatedAt": "2026-08-15T12:48:25.161Z",
+  "generatedAt": "2026-08-15T18:37:05.190Z",
   "login": "AnkitPorwal04",
   "name": "Ankit Porwal",
   "avatarUrl": "https://avatars.githubusercontent.com/u/96345105?u=95f86ee926ceff67f8a19437c4b0386c63a048bf&v=4",
   "bio": "Software Engineer @ Ethara.AI, Gurugram, India",
   "createdAt": "2021-12-18T15:08:59Z",
   "followers": 17,
-  "following": 12,
-  "totalStars": 140,
-  "totalForks": 7,
+  "following": 13,
+  "totalStars": 141,
+  "totalForks": 8,
   "totalRepos": 39,
   "totalPRs": 7,
   "totalIssues": 0,
-  "totalCommits": 1638,
+  "totalCommits": 1647,
   "commitsYearLabel": "2021–2026",
-  "contributionsThisYear": 646,
+  "contributionsThisYear": 656,
   "languages": [
     {
       "name": "CSS",
       "color": "#663399",
-      "size": 742383
+      "size": 746648
     },
     {
       "name": "TypeScript",
       "color": "#3178c6",
-      "size": 590869
+      "size": 615801
     },
     {
       "name": "JavaScript",
@@ -1556,7 +1556,7 @@
       },
       {
         "date": "2026-08-15",
-        "contributionCount": 3
+        "contributionCount": 13
       }
     ],
     "monthly": [
@@ -1610,7 +1610,7 @@
       },
       {
         "month": "2026-08",
-        "count": 145
+        "count": 155
       }
     ]
   },
