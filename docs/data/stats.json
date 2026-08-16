@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-08-16T06:49:18.494Z",
+  "generatedAt": "2026-08-16T12:49:50.575Z",
   "login": "AnkitPorwal04",
   "name": "Ankit Porwal",
   "avatarUrl": "https://avatars.githubusercontent.com/u/96345105?u=95f86ee926ceff67f8a19437c4b0386c63a048bf&v=4",
-  "bio": "Software Engineer @ Ethara.AI, Gurugram, India",
+  "bio": "Software Engineer @ Ethara.AI · Building infrastructure for frontier AI systems",
   "createdAt": "2021-12-18T15:08:59Z",
   "followers": 17,
   "following": 13,
   "totalStars": 141,
   "totalForks": 8,
   "totalRepos": 39,
-  "totalPRs": 7,
+  "totalPRs": 11,
   "totalIssues": 0,
-  "totalCommits": 1653,
+  "totalCommits": 1658,
   "commitsYearLabel": "2021–2026",
-  "contributionsThisYear": 662,
+  "contributionsThisYear": 674,
   "languages": [
     {
       "name": "CSS",
@@ -1532,7 +1532,7 @@
       },
       {
         "date": "2026-08-16",
-        "contributionCount": 2
+        "contributionCount": 14
       }
     ],
     "monthly": [
@@ -1586,7 +1586,7 @@
       },
       {
         "month": "2026-08",
-        "count": 161
+        "count": 173
       }
     ]
   },
@@ -1602,7 +1602,7 @@
     },
     {
       "name": "BlogsByAnkit",
-      "description": null,
+      "description": "Blogging platform - React and Vite with a TinyMCE rich-text editor and Firebase backend",
       "url": "https://github.com/AnkitPorwal04/BlogsByAnkit",
       "stars": 5,
       "forks": 0,
@@ -1611,7 +1611,7 @@
     },
     {
       "name": "Razorpay",
-      "description": null,
+      "description": "Razorpay payment gateway integration for e-commerce checkout flows",
       "url": "https://github.com/AnkitPorwal04/Razorpay",
       "stars": 5,
       "forks": 0,
@@ -1620,7 +1620,7 @@
     },
     {
       "name": "ImaginAI",
-      "description": null,
+      "description": "Full-stack text-to-image platform - React frontend, Flask API, Stable Diffusion inference, Firebase auth",
       "url": "https://github.com/AnkitPorwal04/ImaginAI",
       "stars": 5,
       "forks": 0,
@@ -1629,7 +1629,7 @@
     },
     {
       "name": "drowsy_driver_web",
-      "description": null,
+      "description": "SafeDrive - real-time driver drowsiness detection web app using YOLOv5 over webcam video, with audio alerts",
       "url": "https://github.com/AnkitPorwal04/drowsy_driver_web",
       "stars": 5,
       "forks": 2,
@@ -1638,7 +1638,7 @@
     },
     {
       "name": "HR_management_system",
-      "description": null,
+      "description": "Django-based HR management system",
       "url": "https://github.com/AnkitPorwal04/HR_management_system",
       "stars": 5,
       "forks": 0,
