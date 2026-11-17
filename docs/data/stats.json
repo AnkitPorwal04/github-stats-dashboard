@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T12:59:45.635Z",
+  "generatedAt": "2026-11-17T13:12:47.079Z",
   "login": "AnkitPorwal04",
   "name": "Ankit Porwal",
   "avatarUrl": "https://avatars.githubusercontent.com/u/96345105?u=95f86ee926ceff67f8a19437c4b0386c63a048bf&v=4",
@@ -7,11 +7,11 @@
   "createdAt": "2021-12-18T15:08:59Z",
   "followers": 16,
   "following": 13,
-  "totalStars": 147,
+  "totalStars": 146,
   "totalForks": 10,
-  "totalRepos": 47,
-  "totalPRs": 61,
-  "totalIssues": 10,
+  "totalRepos": 45,
+  "totalPRs": 57,
+  "totalIssues": 0,
   "totalCommits": 3548,
   "commitsYearLabel": "2021–2026",
   "contributionsThisYear": 2545,
@@ -19,27 +19,27 @@
     {
       "name": "TypeScript",
       "color": "#3178c6",
-      "size": 1662475
+      "size": 1376240
     },
     {
       "name": "Python",
       "color": "#3572A5",
-      "size": 966698
+      "size": 964237
     },
     {
       "name": "CSS",
       "color": "#663399",
-      "size": 881929
+      "size": 753374
     },
     {
       "name": "JavaScript",
       "color": "#f1e05a",
-      "size": 521345
+      "size": 512420
     },
     {
       "name": "HTML",
       "color": "#e34c26",
-      "size": 179672
+      "size": 179123
     },
     {
       "name": "C++",
@@ -64,12 +64,12 @@
     {
       "name": "Shell",
       "color": "#89e051",
-      "size": 12526
+      "size": 4905
     },
     {
       "name": "Dockerfile",
       "color": "#384d54",
-      "size": 3480
+      "size": 2560
     }
   ],
   "timeline": {
@@ -1256,11 +1256,11 @@
       },
       {
         "date": "2026-09-07",
-        "contributionCount": 30
+        "contributionCount": 31
       },
       {
         "date": "2026-09-08",
-        "contributionCount": 24
+        "contributionCount": 23
       },
       {
         "date": "2026-09-09",
@@ -1416,11 +1416,11 @@
       },
       {
         "date": "2026-10-17",
-        "contributionCount": 7
+        "contributionCount": 8
       },
       {
         "date": "2026-10-18",
-        "contributionCount": 12
+        "contributionCount": 11
       },
       {
         "date": "2026-10-19",
