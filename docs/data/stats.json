@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T01:46:57.956Z",
+  "generatedAt": "2026-11-17T12:59:45.635Z",
   "login": "AnkitPorwal04",
   "name": "Ankit Porwal",
   "avatarUrl": "https://avatars.githubusercontent.com/u/96345105?u=95f86ee926ceff67f8a19437c4b0386c63a048bf&v=4",
@@ -7,39 +7,39 @@
   "createdAt": "2021-12-18T15:08:59Z",
   "followers": 16,
   "following": 13,
-  "totalStars": 146,
+  "totalStars": 147,
   "totalForks": 10,
-  "totalRepos": 45,
-  "totalPRs": 57,
-  "totalIssues": 0,
-  "totalCommits": 3536,
+  "totalRepos": 47,
+  "totalPRs": 61,
+  "totalIssues": 10,
+  "totalCommits": 3548,
   "commitsYearLabel": "2021–2026",
-  "contributionsThisYear": 2533,
+  "contributionsThisYear": 2545,
   "languages": [
     {
       "name": "TypeScript",
       "color": "#3178c6",
-      "size": 1376240
+      "size": 1662475
     },
     {
       "name": "Python",
       "color": "#3572A5",
-      "size": 964237
+      "size": 966698
     },
     {
       "name": "CSS",
       "color": "#663399",
-      "size": 753374
+      "size": 881929
     },
     {
       "name": "JavaScript",
       "color": "#f1e05a",
-      "size": 512420
+      "size": 521345
     },
     {
       "name": "HTML",
       "color": "#e34c26",
-      "size": 179123
+      "size": 179672
     },
     {
       "name": "C++",
@@ -64,12 +64,12 @@
     {
       "name": "Shell",
       "color": "#89e051",
-      "size": 4905
+      "size": 12526
     },
     {
       "name": "Dockerfile",
       "color": "#384d54",
-      "size": 2560
+      "size": 3480
     }
   ],
   "timeline": {
@@ -1256,11 +1256,11 @@
       },
       {
         "date": "2026-09-07",
-        "contributionCount": 31
+        "contributionCount": 30
       },
       {
         "date": "2026-09-08",
-        "contributionCount": 23
+        "contributionCount": 24
       },
       {
         "date": "2026-09-09",
@@ -1416,11 +1416,11 @@
       },
       {
         "date": "2026-10-17",
-        "contributionCount": 8
+        "contributionCount": 7
       },
       {
         "date": "2026-10-18",
-        "contributionCount": 11
+        "contributionCount": 12
       },
       {
         "date": "2026-10-19",
@@ -1540,7 +1540,7 @@
       },
       {
         "date": "2026-11-17",
-        "contributionCount": 0
+        "contributionCount": 12
       }
     ],
     "monthly": [
@@ -1594,7 +1594,7 @@
       },
       {
         "month": "2026-11",
-        "count": 288
+        "count": 300
       }
     ]
   },
@@ -1605,6 +1605,7 @@
       "url": "https://github.com/AnkitPorwal04/LeetCode",
       "stars": 16,
       "forks": 3,
+      "pushedAt": "2026-08-11T13:16:22Z",
       "language": "Python",
       "languageColor": "#3572A5"
     },
@@ -1614,6 +1615,7 @@
       "url": "https://github.com/AnkitPorwal04/BlogsByAnkit",
       "stars": 5,
       "forks": 0,
+      "pushedAt": "2024-06-16T04:28:10Z",
       "language": "JavaScript",
       "languageColor": "#f1e05a"
     },
@@ -1623,6 +1625,7 @@
       "url": "https://github.com/AnkitPorwal04/Razorpay",
       "stars": 5,
       "forks": 0,
+      "pushedAt": "2024-05-17T17:52:48Z",
       "language": "JavaScript",
       "languageColor": "#f1e05a"
     },
@@ -1632,6 +1635,7 @@
       "url": "https://github.com/AnkitPorwal04/ImaginAI",
       "stars": 5,
       "forks": 0,
+      "pushedAt": "2024-09-20T17:11:03Z",
       "language": "JavaScript",
       "languageColor": "#f1e05a"
     },
@@ -1641,6 +1645,7 @@
       "url": "https://github.com/AnkitPorwal04/drowsy_driver_web",
       "stars": 5,
       "forks": 2,
+      "pushedAt": "2025-05-03T20:19:40Z",
       "language": "Python",
       "languageColor": "#3572A5"
     },
@@ -1650,8 +1655,69 @@
       "url": "https://github.com/AnkitPorwal04/HR_management_system",
       "stars": 5,
       "forks": 0,
+      "pushedAt": "2023-10-04T12:55:46Z",
       "language": "CSS",
       "languageColor": "#663399"
+    },
+    {
+      "name": "Interview_prep",
+      "description": "AI-powered interview preparation platform - Next.js with Google Gemini via the Vercel AI SDK and Firebase auth",
+      "url": "https://github.com/AnkitPorwal04/Interview_prep",
+      "stars": 4,
+      "forks": 1,
+      "pushedAt": "2025-09-03T19:51:20Z",
+      "language": "TypeScript",
+      "languageColor": "#3178c6"
+    },
+    {
+      "name": "RAG_Project",
+      "description": "Retrieval-augmented generation over custom document collections - FAISS semantic search paired with LLM reasoning, served via Streamlit",
+      "url": "https://github.com/AnkitPorwal04/RAG_Project",
+      "stars": 4,
+      "forks": 0,
+      "pushedAt": "2025-08-01T05:25:52Z",
+      "language": "Jupyter Notebook",
+      "languageColor": "#DA5B0B"
+    },
+    {
+      "name": "Slash_validate",
+      "description": "Intern verification portal - static HTML/CSS front-end",
+      "url": "https://github.com/AnkitPorwal04/Slash_validate",
+      "stars": 4,
+      "forks": 0,
+      "pushedAt": "2025-03-31T15:51:27Z",
+      "language": "CSS",
+      "languageColor": "#663399"
+    },
+    {
+      "name": "RAG_model",
+      "description": "Speech processing pipeline - Whisper transcription, MarianMT translation, and sentence-transformer similarity scoring behind a Gradio interface",
+      "url": "https://github.com/AnkitPorwal04/RAG_model",
+      "stars": 4,
+      "forks": 0,
+      "pushedAt": "2024-08-04T08:17:05Z",
+      "language": "Jupyter Notebook",
+      "languageColor": "#DA5B0B"
+    },
+    {
+      "name": "real_reveal",
+      "description": "Video deepfake detection using ResNeXt feature extraction and LSTM temporal modeling",
+      "url": "https://github.com/AnkitPorwal04/real_reveal",
+      "stars": 4,
+      "forks": 0,
+      "pushedAt": "2024-09-19T14:45:35Z",
+      "language": "Jupyter Notebook",
+      "languageColor": "#DA5B0B"
+    },
+    {
+      "name": "face_recognition",
+      "description": "Face detection and recognition with OpenCV Haar cascades - webcam capture, dataset building, and recognition scripts",
+      "url": "https://github.com/AnkitPorwal04/face_recognition",
+      "stars": 4,
+      "forks": 0,
+      "pushedAt": "2024-02-13T09:31:15Z",
+      "language": "Jupyter Notebook",
+      "languageColor": "#DA5B0B"
     }
   ]
 }

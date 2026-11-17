@@ -82,6 +82,7 @@ query($login: String!, $after: String) {
         stargazerCount
         forkCount
         isPrivate
+        pushedAt
         primaryLanguage { name color }
         languages(first: 15, orderBy: {field: SIZE, direction: DESC}) {
           edges { size node { name color } }
@@ -191,13 +192,14 @@ async function main() {
 
   const topRepos = repos
     .filter((r) => !r.isPrivate)
-    .slice(0, 6)
+    .slice(0, 12)
     .map((r) => ({
       name: r.name,
       description: r.description,
       url: r.url,
       stars: r.stargazerCount,
       forks: r.forkCount,
+      pushedAt: r.pushedAt || null,
       language: r.primaryLanguage?.name || null,
       languageColor: r.primaryLanguage?.color || null,
     }));

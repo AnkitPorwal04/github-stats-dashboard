@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GitHub Stats Dashboard</title>
-  <meta name="description" content="A self-hosted GitHub statistics dashboard." />
+  <meta name="description" content="A self-hosted, interactive GitHub statistics dashboard." />
   <meta name="color-scheme" content="dark" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,7 +27,13 @@
         <span class="avatar-ring" aria-hidden="true"></span>
       </div>
       <div class="hero-meta">
-        <h1 id="name">Loading…</h1>
+        <div class="hero-top">
+          <h1 id="name">Loading…</h1>
+          <span class="live-pill" id="live-pill" title="Data is refreshed by a scheduled workflow">
+            <span class="live-dot" aria-hidden="true"></span>
+            <span id="refreshed">Data refreshed —</span>
+          </span>
+        </div>
         <a id="login" class="login" href="#" target="_blank" rel="noopener"></a>
         <p id="bio" class="bio"></p>
         <div class="badges">
@@ -40,6 +46,8 @@
     </header>
 
     <section class="stat-grid reveal" id="stat-grid" aria-label="Key statistics"></section>
+
+    <section class="streak-grid reveal" id="streak-grid" aria-label="Streaks"></section>
 
     <section class="card reveal" id="heatmap-card">
       <div class="card-head">
@@ -60,11 +68,22 @@
       </div>
     </section>
 
-    <section class="charts">
-      <div class="card chart-card reveal">
-        <div class="card-head"><h2>Monthly contributions</h2></div>
-        <div class="chart-wrap"><canvas id="timelineChart"></canvas></div>
+    <section class="card chart-card reveal" id="range-card">
+      <div class="card-head">
+        <h2>Contribution timeline</h2>
+        <div class="head-right">
+          <span class="muted" id="range-total"></span>
+          <div class="segmented" id="range-control" role="group" aria-label="Select time range">
+            <button type="button" class="seg-btn" data-range="30D">30D</button>
+            <button type="button" class="seg-btn" data-range="90D">90D</button>
+            <button type="button" class="seg-btn" data-range="1Y">1Y</button>
+          </div>
+        </div>
       </div>
+      <div class="chart-wrap"><canvas id="timelineChart"></canvas></div>
+    </section>
+
+    <section class="charts">
       <div class="card chart-card reveal">
         <div class="card-head"><h2>Top languages</h2></div>
         <div class="lang-layout">
@@ -72,10 +91,24 @@
           <ul class="lang-list" id="lang-list"></ul>
         </div>
       </div>
+      <div class="card chart-card reveal">
+        <div class="card-head">
+          <h2>Coding rhythm</h2>
+          <span class="muted" id="rhythm-note"></span>
+        </div>
+        <div class="chart-wrap"><canvas id="rhythmChart"></canvas></div>
+      </div>
     </section>
 
     <section class="card reveal" id="repos-card">
-      <div class="card-head"><h2>Top repositories</h2></div>
+      <div class="card-head">
+        <h2>Repository explorer</h2>
+        <div class="segmented" id="sort-control" role="group" aria-label="Sort repositories">
+          <button type="button" class="seg-btn" data-sort="stars">Stars</button>
+          <button type="button" class="seg-btn" data-sort="forks">Forks</button>
+          <button type="button" class="seg-btn" data-sort="name">Name</button>
+        </div>
+      </div>
       <div class="repo-grid" id="repo-grid"></div>
     </section>
 
@@ -98,6 +131,7 @@
     </footer>
   </main>
 
+  <div id="hm-tooltip" class="hm-tooltip" role="tooltip" aria-hidden="true"></div>
   <div id="toast" class="toast hidden"></div>
   <div id="error" class="error hidden"></div>
 
