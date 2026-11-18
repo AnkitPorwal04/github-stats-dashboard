@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-18T00:48:47.781Z",
+  "generatedAt": "2026-11-18T15:26:40.352Z",
   "login": "AnkitPorwal04",
   "name": "Ankit Porwal",
-  "avatarUrl": "https://avatars.githubusercontent.com/u/96345105?u=95f86ee926ceff67f8a19437c4b0386c63a048bf&v=4",
+  "avatarUrl": "https://avatars.githubusercontent.com/u/96345105?u=85d14f9f24819fdc011dae4e4af3f524ae5ee682&v=4",
   "bio": "Software Engineer @ Ethara.AI · Building infrastructure for frontier AI systems",
   "createdAt": "2021-12-18T15:08:59Z",
   "followers": 16,
@@ -12,9 +12,9 @@
   "totalRepos": 46,
   "totalPRs": 57,
   "totalIssues": 0,
-  "totalCommits": 3559,
+  "totalCommits": 3572,
   "commitsYearLabel": "2021–2026",
-  "contributionsThisYear": 2557,
+  "contributionsThisYear": 2570,
   "languages": [
     {
       "name": "TypeScript",
@@ -47,14 +47,14 @@
       "size": 88263
     },
     {
+      "name": "Swift",
+      "color": "#F05138",
+      "size": 85252
+    },
+    {
       "name": "SCSS",
       "color": "#c6538c",
       "size": 83114
-    },
-    {
-      "name": "Swift",
-      "color": "#F05138",
-      "size": 70701
     },
     {
       "name": "Java",
@@ -1529,7 +1529,7 @@
       },
       {
         "date": "2026-11-13",
-        "contributionCount": 21
+        "contributionCount": 22
       },
       {
         "date": "2026-11-14",
@@ -1541,7 +1541,7 @@
       },
       {
         "date": "2026-11-16",
-        "contributionCount": 8
+        "contributionCount": 10
       },
       {
         "date": "2026-11-17",
@@ -1549,7 +1549,7 @@
       },
       {
         "date": "2026-11-18",
-        "contributionCount": 2
+        "contributionCount": 12
       }
     ],
     "monthly": [
@@ -1603,7 +1603,7 @@
       },
       {
         "month": "2026-11",
-        "count": 312
+        "count": 325
       }
     ]
   },
